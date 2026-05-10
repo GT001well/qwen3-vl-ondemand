@@ -115,7 +115,9 @@ Or just close the terminal — `start.sh` uses `exec`, so closing the terminal k
 | `VL_POLL_INTERVAL` | `15` | Idle check interval (seconds) |
 | `VL_CTX_SIZE` | `8192` | Context window size |
 | `VL_N_GPU_LAYERS` | `99` | GPU offloading layers |
-| `VL_PARALLEL` | `4` | Max parallel requests |
+| `VL_PARALLEL` | `1` | Parallel request slots |
+| `VL_CACHE_K` | `q8_0` | Key cache type (f16/q8_0/q4_0) |
+| `VL_CACHE_V` | `q8_0` | Value cache type (f16/q8_0/q4_0) |
 
 ---
 

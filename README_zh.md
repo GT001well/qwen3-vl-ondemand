@@ -124,7 +124,9 @@ curl http://127.0.0.1:8083/v1/chat/completions \
 | `VL_POLL_INTERVAL` | `15` | 空闲检测间隔（秒） |
 | `VL_CTX_SIZE` | `8192` | 上下文长度 |
 | `VL_N_GPU_LAYERS` | `99` | GPU 卸载层数 |
-| `VL_PARALLEL` | `4` | 并行请求数 |
+| `VL_PARALLEL` | `1` | 并行请求槽位数 |
+| `VL_CACHE_K` | `q8_0` | Key 缓存类型（f16/q8_0/q4_0） |
+| `VL_CACHE_V` | `q8_0` | Value 缓存类型（f16/q8_0/q4_0） |
 
 ---
 

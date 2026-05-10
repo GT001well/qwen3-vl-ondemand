@@ -36,7 +36,9 @@ IDLE_TIMEOUT = int(os.environ.get("VL_IDLE_TIMEOUT", "300"))   # seconds
 POLL_INTERVAL = int(os.environ.get("VL_POLL_INTERVAL", "15"))
 CTX_SIZE    = int(os.environ.get("VL_CTX_SIZE", "8192"))
 N_GPU_LAYERS = int(os.environ.get("VL_N_GPU_LAYERS", "99"))
-PARALLEL    = int(os.environ.get("VL_PARALLEL", "4"))
+PARALLEL    = int(os.environ.get("VL_PARALLEL", "1"))
+CACHE_K     = os.environ.get("VL_CACHE_K", "q8_0")
+CACHE_V     = os.environ.get("VL_CACHE_V", "q8_0")
 
 # ---------------------------------------------------------------------------
 # PDEATHSIG — child dies when relay dies (even SIGKILL)
@@ -76,6 +78,8 @@ def _start_backend() -> bool:
              "--n-gpu-layers", str(N_GPU_LAYERS),
              "--ctx-size", str(CTX_SIZE),
              "--no-warmup",
+             "--cache-type-k", CACHE_K,
+             "--cache-type-v", CACHE_V,
              "--cont-batching",
              "--parallel", str(PARALLEL)],
             stdout=subprocess.DEVNULL,
