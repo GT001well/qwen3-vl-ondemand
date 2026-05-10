@@ -77,7 +77,6 @@ def _start_backend() -> bool:
              "--host", "127.0.0.1",
              "--n-gpu-layers", str(N_GPU_LAYERS),
              "--ctx-size", str(CTX_SIZE),
-             "--no-warmup",
              "--cache-type-k", CACHE_K,
              "--cache-type-v", CACHE_V,
              "--cont-batching",
