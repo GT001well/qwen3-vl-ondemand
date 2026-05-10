@@ -1,5 +1,7 @@
 # Qwen3-VL On-Demand Relay
 
+> [中文文档](README_zh.md) | English
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 ![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue)
 
